@@ -1,3 +1,7 @@
+let left1 = document.querySelector('#left1');
+let left2 = document.querySelector('#left2');
+let left3 = document.querySelector('#left3');
+let mainControl = document.querySelector('#center-main');
 //Function to generate random number between 1 to 256
 function generateRandomNumber() {
     let randomNum = Math.random();
@@ -32,10 +36,18 @@ function createInnerDivs(pixel) {
         innerD.style.margin = '0px';
         innerD.style.border = '0.1px dotted rgba(179,179,179,0.8)';
         innerD.style.boxSizing = 'border-box';
-        innerD.addEventListener('click', () => {
-        innerD.style.backgroundColor = generateRandomColor();
-        })
+        innerD.addEventListener('mouseover', () => {
+        innerD.style.backgroundColor = 'black'/*generateRandomColor()*/;
+        });
+
+        mainControl.addEventListener('click', () => {
+            div.removeChild(innerD);
+        });
     }
 }
 
 createInnerDivs(4);
+
+mainControl.addEventListener('click', () => {
+    createInnerDivs(+prompt('Enter a number between 1 and 30'));
+});
