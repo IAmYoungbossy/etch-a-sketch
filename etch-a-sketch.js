@@ -39,15 +39,21 @@ function createInnerDivs(pixel) {
         innerD.addEventListener('mouseover', () => {
         innerD.style.backgroundColor = 'black'/*generateRandomColor()*/;
         });
-
+        //Event to remove the current divs
         mainControl.addEventListener('click', () => {
             div.removeChild(innerD);
+        });
+
+        //Event to clear current drawings on sketch pad
+        left1.addEventListener('click', () => {
+            innerD.style.backgroundColor = '#CBCFC2';
         });
     }
 }
 
-createInnerDivs(4);
+createInnerDivs(16);
 
+//Event to add new divs entered from the prompt
 mainControl.addEventListener('click', () => {
     createInnerDivs(+prompt('Enter a number between 1 and 30'));
 });
