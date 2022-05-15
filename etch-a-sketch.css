@@ -177,6 +177,7 @@ body {
     border-radius: 5px;
     box-shadow: 0px 0px 5px white;
     margin-top: 5px auto 0px;
+    cursor: pointer;
 }
 
 .slider:hover {
