@@ -116,3 +116,19 @@ function createInnerDivs(pixel) {
     }
 }
 
+//Function for popup input
+function promptInput() {
+    let promptValue = +input.value;
+    if (promptValue < 1) {
+        h4.textContent = 'Please enter a number above 0.';
+        createInnerDivs(range.value);
+        return;
+    } else if (promptValue > 30) {
+        h4.textContent = 'Please enter a number below 30.';
+        createInnerDivs(range.value);
+    } else {
+        range.value = promptValue;
+        gridText.textContent = promptValue;
+        createInnerDivs(promptValue);
+    }
+}
