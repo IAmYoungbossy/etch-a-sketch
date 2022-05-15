@@ -51,7 +51,7 @@ function createInnerDivs(pixel) {
     }
 }
 
-createInnerDivs(16);
+createInnerDivs(30);
 
 //Event to add new divs entered from the prompt
 mainControl.addEventListener('click', () => {

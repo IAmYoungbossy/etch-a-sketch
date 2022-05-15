@@ -17,16 +17,48 @@
         <div class="etchContainer"></div>
         <div class="buttons">
             <div class="left group">
-                <div class="control" id="left1"></div>
-                <div class="control" id="left2"></div>
-                <div class="control" id="left3"></div>
+                <div class="control" id="left1">
+                    <button class="main one">
+                        Clear All
+                    </button>
+                </div>
+                <div class="up2">
+                    <div class="control" id="left2">
+                        <button class="main two"></button>
+                    </div>
+                </div>
+                <div class="up3">Color
+                    <div class="control" id="left3">
+                        <input type="color" id="color" class="three main" value="black">
+                    </div>
+                </div>
             </div>
-            <div class="control" id="center-main"></div>
+            <div class="control" id="center-main">
+                <button class="main">
+                    User Input
+                </button>
+            </div>
             <div class="right group">
-                <div class="control" id="right3"></div>
-                <div class="control" id="right2"></div>
-                <div class="control" id="right1"></div>
+                <div class="up3">Black++
+                    <div class="control" id="right3">
+                        <button class="main three"></button>
+                    </div>
+                </div>
+                <div class="up2">Black
+                    <div class="control" id="right2">
+                        <button class="main two"></button>
+                    </div>
+                </div>
+                <div class="control" id="right1">
+                    <button class="main one">
+                        RGB Color
+                    </button>
+                </div>
             </div>
+        </div>
+        <div id="bottom-decor">
+            <input id="range" type="range" min="1" max="31" value="8" class="slider">
+            <span id="demo"></span>
         </div>
     </div>
 </body>
