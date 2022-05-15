@@ -99,11 +99,6 @@ function createInnerDivs(pixel) {
             }
         }
 
-        //Event to remove the current divs
-        mainControl.addEventListener('click', () => {
-            div.removeChild(innerD);
-        });
-
         //Event to clear current drawings on sketch pad
         left1.addEventListener('click', () => {
             innerD.style.backgroundColor = '#CBCFC2';
