@@ -19,6 +19,7 @@ const right2 = document.querySelector('#right2');
 const right1 = document.querySelector('#right1');
 /*initialize*/
 h4.textContent = 'Please enter a number between 1 and 100.';
+
 //Function to generate random number between 1 to 256
 function generateRandomNumber() {
     let randomNum = Math.random();
@@ -30,7 +31,7 @@ function generateRandomColor() {
     return ("rgb("+generateRandomNumber()+","+generateRandomNumber()+","+generateRandomNumber()+")");
 }
 
-//Function to create divs for sketching
+//Function to create divs for etching
 function createInnerDivs(pixel) {
     //Initializing variables
     const WidthAndHieght = 350;//Width and height of etch container
@@ -51,11 +52,16 @@ function createInnerDivs(pixel) {
         innerD.style.height = pixelSquare;
         innerD.style.width = pixelSquare;
         innerD.style.margin = '0px';
-        innerD.style.border = '0.1px dotted rgba(179,179,179,0.8)';
+        innerD.style.border = '1px dotted rgba(179,179,179,1)';
         innerD.style.boxSizing = 'border-box';
-        innerD.addEventListener('mouseover', () => {
-        innerD.style.backgroundColor = 'black'/*generateRandomColor()*/;
-        });
+
+        //Function to call random colors
+        function getRandomRgb() {
+            return (innerD.addEventListener('mouseover', () => {
+                innerD.style.backgroundColor = generateRandomColor();
+                }));
+        }
+        
         //Event to remove the current divs
         mainControl.addEventListener('click', () => {
             div.removeChild(innerD);
