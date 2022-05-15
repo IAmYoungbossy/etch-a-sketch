@@ -99,10 +99,6 @@ function createInnerDivs(pixel) {
             }
         }
 
-        //Event to clear current drawings on sketch pad
-        left1.addEventListener('click', () => {
-            innerD.style.backgroundColor = '#CBCFC2';
-        });
     }
 }
 
