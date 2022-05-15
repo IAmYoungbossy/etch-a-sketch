@@ -1,2 +1,5 @@
 # etch-a-sketch
-I'll be buiding Etch A Sketch with Flexbox as part of The Odin Project
+Built Etch-A-Sketch web app as part of The Odin Project curriculum.
+
+Here's the link to check out my ptoject
+https://iamyoungbossy.github.io/etch-a-sketch/
