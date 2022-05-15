@@ -64,7 +64,7 @@ function createInnerDivs(pixel) {
         
         //Function to clear each pixel
         function erasePixel() {
-            innerD.addEventListener('mouse', () => {
+            innerD.addEventListener('mouseover', () => {
                 innerD.style.backgroundColor = '#CBCFC2';
             });
         }
