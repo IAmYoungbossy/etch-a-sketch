@@ -93,18 +93,26 @@ function createInnerDivs(pixel) {
         function blackShadding() {
             let j = 0;
             for (let k = 1; k++) {
-                innerD.addEventListener('click', () => {
+                innerD.addEventListener('mouseover', () => {
                     innerD.style.backgroundColor = 'rgba('+0+','+0+','+0+','+(j += 0.1*10)/10+')';
                 });
             }
         }
 
+        //Event listeners assignment
+        right3.addEventListener('click', blackShadding);
+        right2.addEventListener('click', callBlackBackground);
+        right1.addEventListener('click', getRandomRgb);
+        left1.addEventListener('click', clearAll);
+        left2.addEventListener('click', erasePixel);
+        okButton.addEventListener('click', () => {
+            div.removeChild(innerD);
+        });
+        range.addEventListener('change', () => {
+            div.removeChild(innerD);
+        });
+        colorPicker.addEventListener('change', chooseColor);
+
     }
 }
 
-createInnerDivs(30);
-
-//Event to add new divs entered from the prompt
-mainControl.addEventListener('click', () => {
-    createInnerDivs(+prompt('Enter a number between 1 and 30'));
-});
