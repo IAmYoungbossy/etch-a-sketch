@@ -82,6 +82,13 @@ function createInnerDivs(pixel) {
         }
         callBlackBackground(); //default etch color
 
+        //Function to pick custume color
+        function chooseColor() {
+            innerD.addEventListener('mouseover', () => {
+                innerD.style.backgroundColor = colorPicker.value
+            });
+        }
+
         //Event to remove the current divs
         mainControl.addEventListener('click', () => {
             div.removeChild(innerD);
