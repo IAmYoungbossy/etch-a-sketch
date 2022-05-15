@@ -130,5 +130,17 @@ function promptInput() {
         range.value = promptValue;
         gridText.textContent = promptValue;
         createInnerDivs(promptValue);
+        toggleModal();
     }
+}
+
+//Function to get value from range input
+function getRangeValue() {
+    createInnerDivs(range.value);
+    gridText.textContent = range.value;
+}
+
+//Function to toggle modal
+function toggleModal() {
+    modal.classList.toggle('show-modal');
 }
