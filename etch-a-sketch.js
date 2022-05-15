@@ -62,6 +62,13 @@ function createInnerDivs(pixel) {
                 }));
         }
         
+        //Function to clear each pixel
+        function erasePixel() {
+            innerD.addEventListener('click', () => {
+                innerD.style.backgroundColor = '#CBCFC2';
+            });
+        }
+
         //Event to remove the current divs
         mainControl.addEventListener('click', () => {
             div.removeChild(innerD);
