@@ -1,4 +1,5 @@
 //DOM CACHING//
+let div = document.querySelector('.etchContainer');
 /*modal*/
 const modal = document.querySelector('.modal');
 const maodalContent = document.querySelector('.modal-content');
@@ -44,7 +45,6 @@ function createInnerDivs(pixel) {
         //Caching DOM to JS variables
         let innerD = document.createElement('div');
         innerD.classList.add('innerDivs');
-        const div = document.querySelector('.etchContainer');
         div.appendChild(innerD);
 
         //CSS styling of divs
@@ -106,10 +106,10 @@ function createInnerDivs(pixel) {
         left1.addEventListener('click', clearAll);
         left2.addEventListener('click', erasePixel);
         okButton.addEventListener('click', () => {
-            div.removeChild(innerD);
+            innerD.remove();
         });
         range.addEventListener('change', () => {
-            div.removeChild(innerD);
+            innerD.remove();
         });
         colorPicker.addEventListener('change', chooseColor);
 
