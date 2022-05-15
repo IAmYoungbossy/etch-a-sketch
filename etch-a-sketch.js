@@ -89,6 +89,16 @@ function createInnerDivs(pixel) {
             });
         }
 
+        //Function to increase black intensity by 10% on each pixel pass
+        function blackShadding() {
+            let j = 0;
+            for (let k = 1; k++) {
+                innerD.addEventListener('click', () => {
+                    innerD.style.backgroundColor = 'rgba('+0+','+0+','+0+','+(j += 0.1*10)/10+')';
+                });
+            }
+        }
+
         //Event to remove the current divs
         mainControl.addEventListener('click', () => {
             div.removeChild(innerD);
