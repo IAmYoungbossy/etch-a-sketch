@@ -64,10 +64,23 @@ function createInnerDivs(pixel) {
         
         //Function to clear each pixel
         function erasePixel() {
-            innerD.addEventListener('click', () => {
+            innerD.addEventListener('mouse', () => {
                 innerD.style.backgroundColor = '#CBCFC2';
             });
         }
+
+        //Function to clear all pixels
+        function clearAll() {
+            innerD.style.backgroundColor = '#CBCFC2';
+        }
+
+        //Function to call black etching color
+        function callBlackBackground() {
+            innerD.addEventListener('mouseover', () => {
+                innerD.style.backgroundColor = 'black'
+            });
+        }
+        callBlackBackground(); //default etch color
 
         //Event to remove the current divs
         mainControl.addEventListener('click', () => {
