@@ -123,7 +123,7 @@ function promptInput() {
         h4.textContent = 'Please enter a number above 0.';
         createInnerDivs(range.value);
         return;
-    } else if (promptValue > 30) {
+    } else if (promptValue > 100) {
         h4.textContent = 'Please enter a number below 30.';
         createInnerDivs(range.value);
     } else {
