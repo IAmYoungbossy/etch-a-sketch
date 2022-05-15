@@ -147,6 +147,6 @@ function toggleModal() {
 
 mainControl.addEventListener('click', toggleModal);
 cancelButton.addEventListener('click', toggleModal);
-range.addEventListener('click', getRangeValue);
+range.addEventListener('change', getRangeValue);
 okButton.addEventListener('click', promptInput);
 createInnerDivs(range.value);
