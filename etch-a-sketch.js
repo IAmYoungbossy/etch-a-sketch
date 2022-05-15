@@ -19,7 +19,7 @@ const right3 = document.querySelector('#right3');
 const right2 = document.querySelector('#right2');
 const right1 = document.querySelector('#right1');
 /*initialize*/
-h4.textContent = 'Please enter a number between 1 and 100.';
+h4.textContent = 'Please enter a number between 1 and 40.';
 
 //Function to generate random number between 1 to 256
 function generateRandomNumber() {
@@ -123,8 +123,8 @@ function promptInput() {
         h4.textContent = 'Please enter a number above 0.';
         createInnerDivs(range.value);
         return;
-    } else if (promptValue > 100) {
-        h4.textContent = 'Please enter a number below 30.';
+    } else if (promptValue > 40) {
+        h4.textContent = 'Please enter a number below 41.';
         createInnerDivs(range.value);
     } else {
         range.value = promptValue;
