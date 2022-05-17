@@ -138,3 +138,26 @@ function remove() {
         div.removeChild(div.firstChild);
     }
 }
+
+cancelButton.addEventListener('click', toggleModal);
+mainControl.addEventListener('click', toggleModal);
+left1.addEventListener('click', clearAll);
+right1.addEventListener('click', getRandomColor);
+colorPicker.addEventListener('change', chooseColor);
+right2.addEventListener('click', blackColoring);
+left2.addEventListener('click', erasePixel);
+right3.addEventListener('click', blackShadding);
+okButton.addEventListener('click', () => {
+    remove();
+    promptInput();
+    toggleModal;
+});
+range.addEventListener('change', () => {
+    remove();
+    getReangeValue();
+});
+window.onclick = function(event) {
+    if(event.target == modal) {
+        toggleModal();
+    }
+}
