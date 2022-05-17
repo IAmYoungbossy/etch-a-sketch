@@ -30,8 +30,6 @@ function generateRandomNumber() {
 
 /*Generate random colors*/
 function generateRandomColor() {
-    let randomNum = Math.random();
-    let randomNumInt = Math.floor(randomNum*256)+1;
     return "rgb("+generateRandomNumber()+","+generateRandomNumber()+","+generateRandomNumber()+")";
 }
 
@@ -67,7 +65,7 @@ function blackColoring() {
 function getRandomColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
-        innerDiv.addEventListener('click', (e) => {
+        innerDiv.addEventListener('mouseover', (e) => {
             e.target.style.backgroundColor = generateRandomColor();
         });
     });
