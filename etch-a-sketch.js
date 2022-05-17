@@ -21,13 +21,31 @@ const right1 = document.querySelector('#right1');
 /*initialize*/
 h4.textContent = 'Please enter a number between 1 and 40.';
 
-//Function to generate random number between 1 to 256
+/*Generate random number between 1 to 256*/
 function generateRandomNumber() {
     let randomNum = Math.random();
     let randomNumInt = Math.floor(randomNum*256)+1;
     return randomNumInt;}
 
-//Function to use the random function to generate random colors
+/*Generate random colors*/
 function generateRandomColor() {
     return ("rgb("+generateRandomNumber()+","+generateRandomNumber()+","+generateRandomNumber()+")");
+}
+
+/*Create grid squares*/
+function createGridSquares() {
+    const widthAndHeight = 350; //Width and Height of grid Container
+    const pixelSquare = (widthAndHeight/pixel)+'px';
+    const totalPixels = pixel*pixel;
+    for (let i = 1; i <= totalPixels; i++) {
+        let innerD = document.createElement('div');
+        innerD.classList.add('innerDivs');
+        div.appendChild(innerD);
+        innerD.style.backgroundColor = '#cbcfc2';
+        innerD.style.height = pixelSquare;
+        innerD.style.width = pixelSquare;
+        innerD.style.margin = '0px';
+        innerD.style.border ='1px solid rgba(179,179,179,1)';
+        innerD.style.boxSizing = 'border-box';
+    }
 }
