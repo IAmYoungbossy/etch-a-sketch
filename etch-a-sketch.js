@@ -33,7 +33,7 @@ function generateRandomColor() {
 }
 
 /*Create grid squares*/
-function createGridSquares() {
+function createGridSquares(pixel) {
     const widthAndHeight = 350; //Width and Height of grid Container
     const pixelSquare = (widthAndHeight/pixel)+'px';
     const totalPixels = pixel*pixel;
