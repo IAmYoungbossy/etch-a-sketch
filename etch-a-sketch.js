@@ -25,11 +25,14 @@ h4.textContent = 'Please enter a number between 1 and 100.';
 function generateRandomNumber() {
     let randomNum = Math.random();
     let randomNumInt = Math.floor(randomNum*256)+1;
-    return randomNumInt;}
+    return randomNumInt;
+}
 
 /*Generate random colors*/
 function generateRandomColor() {
-    return ("rgb("+generateRandomNumber()+","+generateRandomNumber()+","+generateRandomNumber()+")");
+    let randomNum = Math.random();
+    let randomNumInt = Math.floor(randomNum*256)+1;
+    return "rgb("+generateRandomNumber()+","+generateRandomNumber()+","+generateRandomNumber()+")";
 }
 
 /*Create grid squares*/
@@ -65,7 +68,7 @@ function getRandomColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
         innerDiv.addEventListener('click', (e) => {
-            e.target.backgroundColor = generateRandomColor();
+            e.target.style.backgroundColor = generateRandomColor();
         });
     });
 }
