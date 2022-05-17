@@ -91,7 +91,7 @@ function blackShadding() {
     innerDivs.forEach(innerDiv => {
         let i = 0;
         for (let j = 1; j <= 1; j++) {
-            innerDivs.addEventListener('mouseover', (e) => {
+            innerDiv.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = 'rgba('+0+','+0+','+0+','+(j += 0.1*10)/10+')';
             });
         }
