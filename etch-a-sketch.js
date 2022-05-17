@@ -48,6 +48,7 @@ function createGridSquares() {
         innerD.style.border ='1px solid rgba(179,179,179,1)';
         innerD.style.boxSizing = 'border-box';
     }
+    blackColoring();
 }
 createGridSquares(range.value);
 
