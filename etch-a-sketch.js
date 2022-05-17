@@ -69,3 +69,12 @@ function getRandomColor() {
         });
     });
 }
+
+function chooseColor() {
+    const innerDivs = document.querySelectorAll('.innerDivs');
+    innerDivs.forEach(innerD => {
+        innerDiv.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = colorPicker.value
+        });
+    });
+}
