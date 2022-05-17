@@ -106,3 +106,19 @@ function erasePixel() {
         });
     });
 }
+
+function promptInput() {
+    let promptValue = +input.value;
+    if (promptValue < 1) {
+        h4.textContent = 'Please enter a number above 0.';
+        createGridSquares(range.value);
+        return;
+    } else if (promptValue > 100) {
+        h4.textContent = 'Please enter a number below 100.';
+        createGridSquares(range.value);
+    } else {
+        range.value = promptValue;
+        gridText.textContent = promptValue;
+        createGridSquares(promptValue);
+    }
+}
