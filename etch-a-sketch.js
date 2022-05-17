@@ -121,4 +121,9 @@ function promptInput() {
         gridText.textContent = promptValue;
         createGridSquares(promptValue);
     }
+    toggleModal();
+}
+
+function toggleModal() {
+    modal.classList.toggle('show-modal');
 }
