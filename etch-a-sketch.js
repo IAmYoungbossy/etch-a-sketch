@@ -127,3 +127,14 @@ function promptInput() {
 function toggleModal() {
     modal.classList.toggle('show-modal');
 }
+
+function getReangeValue() {
+    createGridSquares(range.value);
+    gridText.textContent = range.value;
+}
+
+function remove() {
+    while(div.firstChild) {
+        div.removeChild(div.firstChild);
+    }
+}
