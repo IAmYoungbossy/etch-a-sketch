@@ -19,7 +19,7 @@ const right3 = document.querySelector('#right3');
 const right2 = document.querySelector('#right2');
 const right1 = document.querySelector('#right1');
 /*initialize*/
-h4.textContent = 'Please enter a number between 1 and 40.';
+h4.textContent = 'Please enter a number between 1 and 100.';
 
 /*Generate random number between 1 to 256*/
 function generateRandomNumber() {
