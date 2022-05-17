@@ -120,8 +120,8 @@ function promptInput() {
         range.value = promptValue;
         gridText.textContent = promptValue;
         createGridSquares(promptValue);
+        toggleModal();
     }
-    toggleModal();
 }
 
 function toggleModal() {
