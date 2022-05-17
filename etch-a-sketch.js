@@ -49,3 +49,13 @@ function createGridSquares() {
         innerD.style.boxSizing = 'border-box';
     }
 }
+createGridSquares(range.value);
+
+function blackColoring() {
+    const innerDivs = document.querySelectorAll('.innerDivs');
+    innerDivs.forEach(innerDiv => {
+        innerDiv.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'black';
+        });
+    });
+}
