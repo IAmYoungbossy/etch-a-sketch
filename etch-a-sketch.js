@@ -53,6 +53,7 @@ function createGridSquares(pixel) {
 }
 createGridSquares(range.value);
 
+//Default colour
 function blackColoring() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
@@ -62,6 +63,7 @@ function blackColoring() {
     });
 }
 
+//Random colour
 function getRandomColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
@@ -71,6 +73,7 @@ function getRandomColor() {
     });
 }
 
+//For custume colour
 function chooseColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
@@ -80,6 +83,7 @@ function chooseColor() {
     });
 }
 
+//Clears all drawings
 function clearAll() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
@@ -87,6 +91,7 @@ function clearAll() {
     });
 }
 
+//Increases black intensity by 10% on each pixel pass
 function blackShadding() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
@@ -99,6 +104,7 @@ function blackShadding() {
     });
 }
 
+//Clears background on each pixels
 function erasePixel() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
@@ -108,6 +114,7 @@ function erasePixel() {
     });
 }
 
+//User prompt for input
 function promptInput() {
     let promptValue = +input.value;
     if (promptValue < 1) {
@@ -125,21 +132,25 @@ function promptInput() {
     }
 }
 
+//Modal prompt
 function toggleModal() {
     modal.classList.toggle('show-modal');
 }
 
+//Gets range value from input
 function getReangeValue() {
     createGridSquares(range.value);
     gridText.textContent = range.value;
 }
 
+//Removes all gridsquares
 function remove() {
     while(div.firstChild) {
         div.removeChild(div.firstChild);
     }
 }
 
+//Event listeners
 cancelButton.addEventListener('click', toggleModal);
 mainControl.addEventListener('click', toggleModal);
 left1.addEventListener('click', clearAll);
