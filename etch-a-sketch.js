@@ -64,7 +64,7 @@ function blackColoring() {
 function getRandomColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
-        innerDiv.addEventListener('mouseover', (e) => {
+        innerDiv.addEventListener('click', (e) => {
             e.target.backgroundColor = generateRandomColor();
         });
     });
@@ -72,7 +72,7 @@ function getRandomColor() {
 
 function chooseColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
-    innerDivs.forEach(innerD => {
+    innerDivs.forEach(innerDiv => {
         innerDiv.addEventListener('mouseover', (e) => {
             e.target.style.backgroundColor = colorPicker.value
         });
