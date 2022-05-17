@@ -78,3 +78,10 @@ function chooseColor() {
         });
     });
 }
+
+function clearAll() {
+    const innerDivs = document.querySelectorAll('.innerDivs');
+    innerDivs.forEach(innerDiv => {
+        innerDiv.style.backgroundColor = '#cbcfc2'
+    });
+}
