@@ -97,3 +97,12 @@ function blackShadding() {
         }
     });
 }
+
+function erasePixel() {
+    const innerDivs = document.querySelectorAll('.innerDivs');
+    innerDivs.forEach(innerDiv => {
+        innerDiv.addEventListener('mouseover', (e) => {
+            innerDiv.style.backgroundColor = '#cbcfc2';
+        });
+    });
+}
