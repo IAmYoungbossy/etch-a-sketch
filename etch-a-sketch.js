@@ -65,7 +65,7 @@ function getRandomColor() {
     const innerDivs = document.querySelectorAll('.innerDivs');
     innerDivs.forEach(innerDiv => {
         innerDiv.addEventListener('mouseover', (e) => {
-            e.target.addEventListener.style.backgroundColor = generateRandomColor();
+            e.target.backgroundColor = generateRandomColor();
         });
     });
 }
